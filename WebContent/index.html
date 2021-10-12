@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome to Mini-Report Project</title>
+</head>
+<body>
+	<h4>Mini-Report是一个迷你型的、可配置的、主要设计用来做系统原型实现的微型报表系统。</h4>
+	<hr>
+	<h4>这个项目演示了采用不同方法来实现报表绘图的解决方案</h4>
+	<h5>
+		方案1.2：后台Java(Graphics绘图)<a href="hello/drawbygraphics">click me!</a>
+		 <a	href="xml/1.xml">原始xml</a>
+	</h5>
+	<hr>
+	<h5>
+		方案2： 前台Canvas绘图 <a href="index_drawbycanvas.html">click me!</a>
+		 <a	href="xml/2.xml">原始xml</a>
+	</h5>
+	<h5>
+		方案3： 前台SVG绘图 <a href="index_drawbysvg.html">click me!</a>
+		 <a	href="xml/3.xml">原始xml</a>
+	</h5>
+	<hr>
+	<h5>下面是XML格式的说明：</h5>
+	<div>
+		<textarea rows=15 cols=150>
+XML报表界面格式定义简要说明如下：		
+<Root>元素代表页面定义的根节点
+<Head>元素代表报表的表头，表头里面的元素只绘制一次
+	<Head>元素里面可以包括 Label 和 Line元素，后续可扩展其他元素
+<Detail>元素代表报表的明细区域，根据给定的数据进行循环处理绘制
+	<Detail>元素里面可以包括Label 和 Line元素，后续可扩展其他元素
+	<Label>元素的【text】属性中可以使用占位符$，代表从数据源获取的数据进行显示的字段替换
+<Data>元素代表要从后台取数的配置，一般用SQL语句代替，可扩展到其他数据获取方式
+	<Data>元素可以扩展为支持查询参数，从而实现动态拼接SQL语句的目的
+	<Data>元素也可以扩展为支持数据权限的配置和调用，执行时自动加入数据权限的控制进去		
+----
+输出方式：目前mini-report支持三种输出方式：1.Java图像输出 2 Canvas绘图 3 SVG绘图
+		</textarea>
+	</div>
+	
+</body>
+</html>

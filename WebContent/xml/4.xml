@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+<Line id="line1" text="line1" x1="0" y1="0" x2="800" y2="0"></Line>
+<Line id="line2" text="line2" x1="0" y1="50" x2="800" y2="50"></Line>
+<Line id="line3" text="line3" x1="0" y1="100" x2="800" y2="100"></Line>
+<Line id="line4" text="line4" x1="0" y1="150" x2="800" y2="150"></Line>
+<Line id="line5" text="line5" x1="0" y1="200" x2="800" y2="200"></Line>
+<Line id="line6" text="line6" x1="0" y1="250" x2="800" y2="250"></Line>
+<Line id="line7" text="line7" x1="0" y1="300" x2="800" y2="300"></Line>
+<Line id="line8" text="line8" x1="0" y1="350" x2="800" y2="350"></Line>
+<Line id="line9" text="line9" x1="0" y1="400" x2="800" y2="400"></Line>
+<Line id="line10" text="line10" x1="0" y1="450" x2="800" y2="450"></Line>
+<Line id="line11" text="line10" x1="0" y1="500" x2="800" y2="500"></Line>
+<Line id="line12" text="line12" x1="0" y1="550" x2="800" y2="550"></Line>
+
+<Line id="line13" text="line13" x1="0" y1="0" x2="0" y2="600"></Line>
+<Line id="line14" text="line14" x1="200" y1="0" x2="200" y2="600"></Line>
+<Line id="line15" text="line15" x1="400" y1="0" x2="400" y2="600"></Line>
+<Line id="line16" text="line16" x1="600" y1="0" x2="600" y2="600"></Line>
+<Line id="line17" text="line17" x1="800" y1="0" x2="800" y2="600"></Line>
+
+<Line id="line18" text="line18" x1="0" y1="0" x2="200" y2="50"></Line>
+<Label id="label1" text="Draw By H5 Canvas" left="50" top="90"></Label>
+
+</Root>

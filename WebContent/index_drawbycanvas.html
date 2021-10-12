@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 引入jquery.js,用来做ajax请求 -->
+<script src="js/jquery.min.js"></script>
+<!-- 在这里定义界面上的div样式 -->
+<style type="text/css">
+.div{
+            border: 1px red solid;text-align: center;line-height: 1px;
+            position:absolute;
+    }
+.div1{
+            border: 1px green solid;text-align: center;
+            line-height: 1px;overflow-x:scroll;overflow-y:scroll;
+     }    
+</style>
+</head>
+<body>
+	<h5>Welcome, draw by canvas </h5>
+	<div style="width:805px;height:605px; top:50px;left:200px" class="div">
+		<canvas id="myCanvas" width="800" height="600" ></canvas>
+	</div>
+	<script>
+		//调用jquery，从后台获取一下json对象
+		var surl="hello/drawbycanvas";
+		$.get(surl,function(data){
+			//data是一个返回的json对象
+			var jsondata = data.jsonobj;
+			console.log(jsondata);
+			if(jsondata){
+				//如果返回jsondata有效
+				var jchildren = jsondata.children;
+				console.log(jchildren.length);
+				
+				for(var i=0;i<jchildren.length;i++){
+					var jsonobj = jchildren[i];
+					//根据jsonobj返回对象的值来进行canvas绘图
+					console.log(jsonobj);
+					//调用方法来画线
+					drawCanvasByJsonobj(jsonobj);
+					//如果是Line，则进行线条绘制
+					
+				}
+			}
+		});
+	</script>
+	<script>
+		function drawCanvasByJsonobj(jsonobj){
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			//根据jsonobj的类型来进行绘制
+			//绘制线条
+			if(jsonobj.uitype == "Line"){
+				ctx.beginPath();
+				ctx.moveTo(jsonobj.x1,jsonobj.y1);
+				ctx.lineTo(jsonobj.x2,jsonobj.y2);
+				ctx.stroke();
+			}
+			//绘制文本标签
+			if(jsonobj.uitype == "Label"){
+				//ctx.beginPath();
+				ctx.fillText(jsonobj.text,jsonobj.left,jsonobj.top);
+				//ctx.stroke();
+			}
+			
+		}
+	</script>
+</body>
+</html>

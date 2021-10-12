@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<Head>
+		<Label id="label1" text="Canvas Picture."
+			left="50" top="90"></Label>
+		<Line id="line1" text="line1" x1="0" y1="100" x2="800" y2="100"></Line>
+	</Head>
+	<Detail top="120" height="40">
+		<Label id="idcolumn" text="$id" left="10" top="0"></Label>
+		<Label id="namecolumn" text="$name" left="200" top="0"></Label>
+		<Label id="memocolumn" text="$memo" left="400" top="0"></Label>
+	</Detail>
+	<Data>
+		Select * from t_test
+	</Data>
+</Root>
